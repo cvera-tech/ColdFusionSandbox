@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<form id="frm_firstForm" name="frm_firstForm" method="post" action="">
+<form id="frm_firstForm" name="frm_firstForm" method="post" action="formAction.cfm">
   <p>
     <label for="fld_firstName">Your First Name</label>
     <input type="text" name="fld_firstName" id="fld_firstName" />
