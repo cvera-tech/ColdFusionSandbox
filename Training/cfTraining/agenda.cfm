@@ -2,6 +2,7 @@
 <cfquery datasource="HDStreet" name="rsCurrentEvents">
     SELECT [Id], [Name], [Date], [Location], [Venue]
     FROM [Events]
+    WHERE [Date] >= #now()#
     ORDER BY [Date] ASC
 </cfquery>
 
@@ -27,18 +28,13 @@
             <div id="EventDetails">
                 <h1>Next Event</h1>
                 <cfoutput>
-                    <p id="eventDate"><span id="month">#month(rsCurrentEvents.Date)#</span> <span id="days">#day(rsCurrentEvents.Date)#</span></p>
+                    <p id="eventDate"><span id="month">#dateFormat(rsCurrentEvents.Date, "mmm")#</span> <span id="days">#day(rsCurrentEvents.Date)#</span></p>
                     <h2>#rsCurrentEvents.Name#</h2>
                     <p>#rsCurrentEvents.Venue# - #rsCurrentEvents.Location#</p>
-                    <p class="alignRight"><a href="events/20110719.html">Read More</a></p>
+                    <p class="alignRight"><a href="agenda.cfm">Read More</a></p>
                 </cfoutput>
             </div>
         </cfif>
     </div>
 </div>
-<div id="footer">
-<p>&copy; Copyright 2011 - HD Street Concert Band</p>
-</div>
-</div>
-</body>
-</html>
+<cfinclude template="aftercontent.cfm">

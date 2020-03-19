@@ -22,7 +22,7 @@
         <div id="menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="agenda.html">Agenda</a></li>
+                <li><a href="agenda.cfm">Agenda</a></li>
                 <li><a href="#">The Band</a>
                     <ul>
                         <li><a href="director.html">The Director</a></li>
