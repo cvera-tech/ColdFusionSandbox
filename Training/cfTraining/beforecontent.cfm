@@ -2,7 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>HD Street Concert Band - Welcome</title>
+    <cfoutput>
+        <title>HD Street Concert Band - #attributes.pageTitle#</title>
+    </cfoutput>
     <link href="styles/hdStreet.css" rel="stylesheet" type="text/css" media="screen" />
     <script type="text/javascript" src="script/jquery.js"></script>
     <script type="text/javascript" src="script/menu.js"></script>
@@ -30,7 +32,7 @@
                     </ul>
                 </li>
                 <li><a href="wePlayForYou.html">We Play For You</a></li>
-                <li><a href="comePlayWithUs.html">Come Play With Us</a></li>
+                <li><a href="comePlayWithUs.cfm">Come Play With Us</a></li>
                 <li><a href="news.cfm">News</a></li>
             </ul>
         </div>

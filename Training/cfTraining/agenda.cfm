@@ -1,4 +1,4 @@
-<cfinclude template="beforecontent.cfm">
+<cfmodule template="beforecontent.cfm" pageTitle="Agenda">
 <cfquery datasource="HDStreet" name="rsCurrentEvents">
     SELECT [Id], [Name], [Date], [Location], [Venue]
     FROM [Events]
@@ -16,7 +16,7 @@
         <cfoutput query="rsEventDetails">
             <div id="calendarContent">
                 <h1> Agenda</h1>
-                    <h1>#Name#</h1>
+                    <h2>#Name#</h2>
                     #Description#
                     <p><a href="agenda.cfm">Back to the Agenda</a></p>
             </div>
